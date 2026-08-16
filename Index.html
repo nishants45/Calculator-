@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AKTU SGPA & CGPA Calculator</title>
+
+    <meta name="description"
+        content="Calculate your AKTU SGPA and CGPA easily using our free calculator.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">AKTU<span>Calc</span></div>
+
+        <nav>
+            <a href="#sgpa">SGPA</a>
+            <a href="#cgpa">CGPA</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <h1>AKTU SGPA & CGPA Calculator</h1>
+
+        <p>
+            Calculate your Semester GPA and Cumulative GPA
+            quickly and easily.
+        </p>
+
+    </section>
+
+
+    <!-- SGPA CALCULATOR -->
+    <main>
+
+        <section class="calculator" id="sgpa">
+
+            <h2>SGPA Calculator</h2>
+
+            <p class="subtitle">
+                Enter your subject credits and grades
+            </p>
+
+
+            <!-- SUBJECT CONTAINER -->
+
+            <div id="subjects">
+
+                <!-- First Subject -->
+                <div class="subject">
+
+                    <input
+                        type="text"
+                        class="subject-name"
+                        placeholder="Subject name">
+
+                    <input
+                        type="number"
+                        class="credit"
+                        placeholder="Credits"
+                        min="0"
+                        step="0.5">
+
+                    <select class="grade">
+
+                        <option value="">Grade</option>
+
+                        <option value="10">O / A*</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                        <option value="4">D</option>
+                        <option value="0">F</option>
+
+                    </select>
+
+                    <button
+                        class="remove-btn"
+                        onclick="removeSubject(this)">
+                        ✕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button
+                    class="add-btn"
+                    onclick="addSubject()">
+                    + Add Subject
+                </button>
+
+                <button
+                    class="calculate-btn"
+                    onclick="calculateSGPA()">
+                    Calculate SGPA
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="sgpaResult" class="result hidden">
+
+                <h3>Your SGPA</h3>
+
+                <div class="result-number" id="sgpaValue">
+                    0.00
+                </div>
+
+                <p id="totalCredits">
+                    Total Credits: 0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CGPA CALCULATOR -->
+
+        <section class="calculator" id="cgpa">
+
+            <h2>CGPA Calculator</h2>
+
+            <p class="subtitle">
+                Enter your semester SGPA and credits
+            </p>
+
+
+            <div id="semesters">
+
+                <div class="semester">
+
+                    <span class="semester-number">
+                        Semester 1
+                    </span>
+
+                    <input
+                        type="number"
+                        class="sgpa-input"
+                        placeholder="SGPA"
+                        min="0"
+                        max="10"
+                        step="0.01">
+
+                    <input
+                        type="number"
+                        class="semester-credit"
+                        placeholder="Credits"
+                        min="0"
+                        step="0.5">
+
+                    <button
+                        class="remove-btn"
+                        onclick="removeSemester(this)">
+                        ✕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button
+                    class="add-btn"
+                    onclick="addSemester()">
+                    + Add Semester
+                </button>
+
+                <button
+                    class="calculate-btn"
+                    onclick="calculateCGPA()">
+                    Calculate CGPA
+                </button>
+
+            </div>
+
+
+            <div id="cgpaResult" class="result hidden">
+
+                <h3>Your CGPA</h3>
+
+                <div class="result-number" id="cgpaValue">
+                    0.00
+                </div>
+
+                <p id="cgpaCredits">
+                    Total Credits: 0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMATION -->
+
+        <section class="info" id="about">
+
+            <h2>How is SGPA calculated?</h2>
+
+            <p>
+                SGPA is calculated using the credit-weighted average
+                of grade points.
+            </p>
+
+            <div class="formula">
+
+                SGPA =
+                Σ (Credit × Grade Point)
+                ÷
+                Σ Credits
+
+            </div>
+
+
+            <h2>How is CGPA calculated?</h2>
+
+            <p>
+                CGPA is calculated using the credit-weighted average
+                of the semester performance.
+            </p>
+
+            <div class="formula">
+
+                CGPA =
+                Σ (SGPA × Semester Credits)
+                ÷
+                Σ Semester Credits
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 AKTUCalc. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
