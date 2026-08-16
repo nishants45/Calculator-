@@ -1,0 +1,418 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background: #ffffff;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+.logo span {
+    color: #111827;
+}
+
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+}
+
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+
+/* CALCULATOR CARD */
+
+.calculator {
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.08);
+}
+
+
+.calculator h2 {
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #6b7280;
+
+    margin-bottom: 30px;
+}
+
+
+/* SUBJECT */
+
+.subject,
+.semester {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.7fr
+        0.9fr
+        45px;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+
+/* REMOVE BUTTON */
+
+.remove-btn {
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.remove-btn:hover {
+    background: #fecaca;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.buttons button {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.add-btn {
+    background: #e0e7ff;
+
+    color: #3730a3;
+}
+
+
+.add-btn:hover {
+    background: #c7d2fe;
+}
+
+
+.calculate-btn {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.calculate-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* RESULT */
+
+.result {
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #eff6ff;
+
+    border-radius: 12px;
+
+    border: 1px solid #bfdbfe;
+}
+
+
+.result h3 {
+    color: #1e40af;
+
+    margin-bottom: 5px;
+}
+
+
+.result-number {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* INFORMATION */
+
+.info {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+
+    margin-bottom: 40px;
+}
+
+
+.info h2 {
+    margin-bottom: 10px;
+
+    margin-top: 20px;
+}
+
+
+.info h2:first-child {
+    margin-top: 0;
+}
+
+
+.info p {
+    color: #4b5563;
+
+    margin-bottom: 15px;
+}
+
+
+.formula {
+    background: #f3f4f6;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+
+    nav {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .calculator {
+        padding: 20px;
+    }
+
+
+    .subject,
+    .semester {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+
+    .subject-name {
+        grid-column: span 2;
+    }
+
+
+    .remove-btn {
+        min-height: 45px;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+    }
+
+
+    .info {
+        padding: 20px;
+    }
+
+}
